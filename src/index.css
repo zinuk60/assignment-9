@@ -1,2 +1,5 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @import 'daisyui/daisyui.css';
+.active{
+    background-color: greenyellow;
+}

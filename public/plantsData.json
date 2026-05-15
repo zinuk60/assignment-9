@@ -1,0 +1,110 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A resilient architectural marvel characterized by its upright, sword-like foliage. Beyond its aesthetic appeal, it is a powerhouse air purifier, efficiently filtering toxins like formaldehyde and benzene from indoor environments. Its hardy nature makes it nearly indestructible, flourishing in low-light conditions and requiring very infrequent watering, making it ideal for busy professionals.",
+    "image": "https://i.ibb.co.com/rRvj1sdG/Snake-plant-in-ceramic-pot-isoalted-on-white-background.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Monstera Deliciosa",
+    "category": "Tropical",
+    "price": 35,
+    "rating": 4.9,
+    "availableStock": 15,
+    "careLevel": "Medium",
+    "description": "Commonly known as the 'Swiss Cheese Plant,' this tropical favorite is a staple of modern interior design. It features dramatic, glossy heart-shaped leaves that develop unique natural perforations known as fenestrations as the plant matures. It brings a bold, jungle-like energy to any room and thrives best in bright, indirect sunlight with moderate humidity levels.",
+    "image": "https://i.ibb.co.com/SDSnGhkb/download-2-removebg-preview.png",
+    "providerName": "LeafyLife Nursery"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Fiddle Leaf Fig",
+    "category": "Trees",
+    "price": 45,
+    "rating": 4.5,
+    "availableStock": 5,
+    "careLevel": "Hard",
+    "description": "The ultimate statement piece for high-end interiors, the Fiddle Leaf Fig boasts massive, violin-shaped leaves with a vibrant green hue and prominent veining. While it demands a more disciplined care routine—preferring consistent bright light, stable temperatures, and a precise watering schedule—its ability to transform a living space into a gallery-like environment makes it a highly sought-after specimen.",
+    "image": "https://i.ibb.co.com/WNG6kFg7/4-FT-Fiddle-Leaf-Fig-Tree-Artificial-with-141-Leaves-Realistic-Faux-Ficus-Lyrata-Trees-in-9-White.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 4,
+    "plantName": "Peace Lily",
+    "category": "Flowering",
+    "price": 22,
+    "rating": 4.7,
+    "availableStock": 12,
+    "careLevel": "Medium",
+    "description": "A symbol of tranquility and elegance, the Peace Lily features striking, hood-like white blooms (spathes) set against a backdrop of deep emerald foliage. It is remarkably communicative, drooping its leaves slightly to signal when it requires hydration, which helps prevent overwatering. Additionally, it serves as an effective biological filter, actively removing indoor air pollutants.",
+    "image": "https://i.ibb.co.com/twwYHNbY/You-Garden-Peace-Lily-Spathiphyllum-Sweet-Silver-in-13cm-Pot-QVC-UK-removebg-preview.png",
+    "providerName": "Bloom & Root"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Aloe Vera",
+    "category": "Succulent",
+    "price": 12,
+    "rating": 4.6,
+    "availableStock": 25,
+    "careLevel": "Easy",
+    "description": "A versatile and practical succulent that combines aesthetic charm with medicinal utility. Its thick, serrated leaves contain a soothing translucent gel widely utilized for treating minor burns and skin irritations. This sun-loving plant requires minimal maintenance, storing its own hydration within its fleshy leaves to easily withstand extended dry periods.",
+    "image": "https://i.ibb.co.com/v6WbMPNy/download-3.jpg",
+    "providerName": "Desert Gems"
+  },
+  {
+    "plantId": 6,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 15,
+    "rating": 4.8,
+    "availableStock": 20,
+    "careLevel": "Easy",
+    "description": "Renowned for its arching, variegated leaves, the Spider Plant is famous for producing 'spiderettes'—miniature offsets that dangle from long, graceful stems. This growth habit makes it a perfect candidate for hanging baskets or elevated pedestals. It is highly adaptable to varying light conditions and is consistently ranked among the top plants for purifying household air.",
+    "image": "https://i.ibb.co.com/5WR4WrHL/Chlorophytum-comosum-Spider-Plants.jpg",
+    "providerName": "LeafyLife Nursery"
+  },
+  {
+    "plantId": 7,
+    "plantName": "Pothos (Golden)",
+    "category": "Vines",
+    "price": 14,
+    "rating": 4.9,
+    "availableStock": 30,
+    "careLevel": "Easy",
+    "description": "The quintessential 'beginner plant,' the Golden Pothos is celebrated for its exceptional growth rate and trailing vines decorated with heart-shaped, yellow-variegated leaves. Whether draped over a bookshelf or trained to climb a moss pole, it adds lush greenery to a room quickly. It is highly tolerant of neglect and can thrive in almost any indoor lighting environment.",
+    "image": "https://i.ibb.co.com/Y4T3FzJh/pothos-removebg-preview.png",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 8,
+    "plantName": "ZZ Plant",
+    "category": "Low Light",
+    "price": 28,
+    "rating": 4.9,
+    "availableStock": 8,
+    "careLevel": "Easy",
+    "description": "The ZZ Plant (Zamioculcas zamiifolia) is the gold standard for low-maintenance indoor greenery. Its waxy, mirror-like leaves reflect available light, brightening up even the dimmest corners of an office or hallway. Because it grows from large underground rhizomes that store water, it is exceptionally drought-tolerant and can thrive even when watered only once a month.",
+    "image": "https://i.ibb.co.com/XrhX1rZh/Signature-ZZ.jpg",
+    "providerName": "LeafyLife Nursery"
+  },
+  {
+    "plantId": 9,
+    "plantName": "Calathea Ornata",
+    "category": "Tropical",
+    "price": 24,
+    "rating": 4.4,
+    "availableStock": 7,
+    "careLevel": "Hard",
+    "description": "Known as the 'Pinstripe Plant,' this variety is a true masterpiece of nature. Its oversized, dark green leaves are intricately detailed with fine, vibrant pink lines that appear hand-painted. As a member of the 'prayer plant' family, its leaves move upward in a folding motion at night. It thrives in high humidity and filtered light, rewarding attentive caretakers with stunning visual texture.",
+    "image": "https://i.ibb.co.com/Y7y7yMrG/Download-Calathea-Ornata-Plant-in-White-Pot-Home-Decor-Green-Leaves-for-free.jpg",
+    "providerName": "Bloom & Root"
+  }
+]
