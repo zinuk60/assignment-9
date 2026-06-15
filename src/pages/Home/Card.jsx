@@ -1,5 +1,6 @@
 import { FaStar } from "react-icons/fa";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
+
 
 
 const Card = ({plant}) => {
@@ -15,9 +16,9 @@ const Card = ({plant}) => {
          <p className="flex justify-center items-center gap-2"><FaStar></FaStar> {plant.rating}</p>
            </div>
            <div className="flex justify-center items-center mt-6">
-            <Link to={`/plants/${plant.plantId}`} className="text-green-950 bg-green-300 p-1 px-3 rounded-lg hover:text-white hover:bg-orange-500 font-semibold">
+            <NavLink to={`/plants/${plant.plantId}`} className="text-green-950 bg-green-300 p-1 px-3 rounded-lg hover:text-white hover:bg-orange-500 font-semibold">
               View Details
-            </Link>
+         </NavLink>
            </div>
         </div>
     );
