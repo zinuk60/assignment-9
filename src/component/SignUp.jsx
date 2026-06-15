@@ -9,6 +9,8 @@ const SignUp = () => {
   console.log(user)
   const Navigate= useNavigate()
   const [errorMsg, setErrorMsg]=useState('');
+ const [firebaseError, setFirebaseError]=useState('')
+
   const onChangePassword=(e)=>{
     const pass = e.target.value;
     console.log(pass);
@@ -43,10 +45,13 @@ const SignUp = () => {
         Navigate('/')
       })
       .catch(error=>{
+          
+
         console.log(error)
       })
     })
     .catch(error=>{
+      setFirebaseError('Account already exist in this email')
       console.log(error)
     })
     e.target.reset();
@@ -73,6 +78,7 @@ const SignUp = () => {
           <div><a className="link link-hover">Forgot password?</a></div>
           <p className='text-center text-red-400'>{errorMsg}</p>
           <button className="btn btn-success mt-4">Login</button>
+          <p className='text-center text-red-400'>{firebaseError}</p>
         </form>
       </div>
     </div>

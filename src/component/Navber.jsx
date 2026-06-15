@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../public/context/ContextApi";
 import Avatar from '@mui/material/Avatar';
-
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const Navber = () => {
   const {user, SignOut}=useContext(AuthContext);
@@ -67,13 +67,20 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
-{user?  <div className="flex gap-2 justify-center items-center">
-  <Avatar >{user.email?.charAt(0)}</Avatar>
-      <p className="text-xl font-bold text-gray-400 hidden md:flex">{user.email?.slice(0, 5)}...</p>
-
-  <button onClick={handleSignOut} className="btn hidden md:flex text-green-800 border border-green-500  hover:bg-green-800 hover:text-white w-fit h-fit md:h-10 md:w-30 md:mr-2 ">Logout</button>
+{user?  
+<div className="flex items-center gap-2">
+ <div className="hidden md:flex">
+     <Avatar >{user.email?.charAt(0)}</Avatar>
+ </div>
+      <div className="dropdown dropdown-end">
+  <div tabIndex={0} role="button" className="btn m-1 text-green-900 text-3xl"> <IoIosArrowDropdown /> </div>
+  <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-2 w-52 p-2 shadow-sm items-center">
+  
+    <li>  <p className="text-xl font-bold text-gray-400 ">{user.email?.slice(0, 5)}...</p></li>
+    <li>  <button onClick={handleSignOut} className="btn  text-green-800 border border-green-500  hover:bg-green-800 hover:text-white w-fit h-fit md:h-10 md:w-30 md:mr-2 ">Logout</button></li>
+  </ul>
 </div>
-                :  <div className="flex justify-center items-center">
+</div>:  <div className="flex justify-center items-center">
                   <Link to={'/signIn'}>
                 <button className="btn text-green-800 border border-green-500 hover:bg-green-800 hover:text-white w-fit h-fit md:h-10 md:w-30 md:mr-2 ">Login</button>
                </Link>

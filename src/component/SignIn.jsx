@@ -1,9 +1,12 @@
-import  { useContext } from 'react';
+import  { useContext, useState } from 'react';
 import { AuthContext } from '../../public/context/ContextApi';
-import {  useNavigate } from 'react-router';
+import {  Link, useLocation, useNavigate } from 'react-router';
 
 const SignIn = () => {
   const {SignIn}= useContext(AuthContext)
+  const location=useLocation();
+const [errorMsg, setErrorMsg]=useState('')
+ 
   const Navigate=useNavigate()
     const handleForm=(e)=>{
 
@@ -12,9 +15,11 @@ const SignIn = () => {
         const pass = e.target.password.value;
         SignIn(email,pass)
         .then(result=>{console.log(result.user)
-       Navigate('/') 
+       Navigate(location.state || '/') 
         })
-        .catch(error=>console.log(error))
+        .catch((error)=>{
+          setErrorMsg('Invalid email or password')
+        })
          e.target.reset();
            
         
@@ -35,9 +40,12 @@ const SignIn = () => {
           <input type="email" className="input" placeholder="Email" name='email' required/>
           <label className="label">Password</label>
           <input type="password" className="input" placeholder="Password" name='password' required/>
-          <div><a className="link link-hover">Forgot password?</a></div>
+          <div><a className="link link-hover">Forgot password?</a></div> 
+          <p className='text-red-500 text-center '>{errorMsg}</p>
           <button className="btn btn-success mt-4">Login</button>
+         <p>Don't have an account? <Link to={'/signUp'} className='text-green-900 font-bold text-[14px] '>SignUp</Link></p>
         </form>
+
       </div>
     </div>
   </div>
