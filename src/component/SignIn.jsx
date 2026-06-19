@@ -1,13 +1,24 @@
 import  { useContext, useState } from 'react';
 import { AuthContext } from '../../public/context/ContextApi';
 import {  Link, useLocation, useNavigate } from 'react-router';
+import { FaGoogle } from "react-icons/fa";
 
 const SignIn = () => {
-  const {SignIn}= useContext(AuthContext)
+  const {SignIn, googleSignIn}= useContext(AuthContext)
   const location=useLocation();
 const [errorMsg, setErrorMsg]=useState('')
  
   const Navigate=useNavigate()
+
+const handleGoogleSignIn=()=>{
+   googleSignIn()
+   .then((result)=>{
+    alert('signIn successfully')
+    Navigate(location.state || '/') 
+   })
+   .catch(error=>console.log(error))
+}
+
     const handleForm=(e)=>{
 
         e.preventDefault();
@@ -43,7 +54,8 @@ const [errorMsg, setErrorMsg]=useState('')
           <div><a className="link link-hover">Forgot password?</a></div> 
           <p className='text-red-500 text-center '>{errorMsg}</p>
           <button className="btn btn-success mt-4">Login</button>
-         <p>Don't have an account? <Link to={'/signUp'} className='text-green-900 font-bold text-[14px] '>SignUp</Link></p>
+          <button onClick={handleGoogleSignIn} className="btn bg-blue-100 mt-4">Login With Google  <FaGoogle /></button>
+         <p className='text-center'>Don't have an account? <Link to={'/signUp'} className='text-green-900 font-bold text-[14px] '>SignUp</Link></p>
         </form>
 
       </div>
