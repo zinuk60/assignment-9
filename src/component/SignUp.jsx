@@ -1,7 +1,7 @@
 import  {  useContext, useState } from 'react';
 import { AuthContext} from '../../public/context/ContextApi';
 
-import { FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import {  Link, useNavigate } from 'react-router';
 
 
@@ -10,12 +10,13 @@ const SignUp = () => {
  
   const Navigate= useNavigate()
   const [errorMsg, setErrorMsg]=useState('');
-  const [firebaseError, setFirebaseError]=useState('')
+  const [firebaseError, setFirebaseError]=useState('');
+  const [showPass, setShowPass]=useState(false)
 
  const handleGoogleSignIn=()=>{
   googleSignIn()
   .then(result=>{
-    alert('Login successful')
+    alert(result.user.displayName,' you are Logged in successful')
     Navigate('/')
   })
   .catch(error=>{
@@ -75,7 +76,7 @@ const SignUp = () => {
 
     return (
         <div>
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero bg-base-200 min-h-screen ">
   <div className="">
     <div className="text-center mb-10">
       <h1 className="text-5xl font-bold text-green-900">Register now!</h1>
@@ -91,7 +92,10 @@ const SignUp = () => {
           <label className="label">Email</label>
           <input type="email" className="input" placeholder="Email" name='email' required/>
           <label className="label">Password</label>
-          <input onChange={onChangePassword} type="password" className="input" placeholder="Password" name='password' required/>
+        
+           <input onChange={onChangePassword} type={showPass? "text":"password"} className="input" placeholder="Password" name='password' required/>
+             <div className='relative left-60 bottom-7' onClick={()=>setShowPass(!showPass)}>{showPass? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>}</div>
+ 
           
           <p className='text-center text-red-400'>{errorMsg}</p>
           <button className="btn btn-success mt-4">Login</button>

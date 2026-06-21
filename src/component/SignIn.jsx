@@ -1,12 +1,14 @@
 import  { useContext, useState } from 'react';
 import { AuthContext } from '../../public/context/ContextApi';
 import {  Link, useLocation, useNavigate } from 'react-router';
-import { FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const SignIn = () => {
-  const {SignIn, googleSignIn}= useContext(AuthContext)
+  const {SignIn, googleSignIn,passwordReset}= useContext(AuthContext)
   const location=useLocation();
-const [errorMsg, setErrorMsg]=useState('')
+const [errorMsg, setErrorMsg]=useState('');
+const [showPass, setShowPass]=useState(false);
+const [email, setEmail]=useState('')
  
   const Navigate=useNavigate()
 
@@ -35,6 +37,26 @@ const handleGoogleSignIn=()=>{
            
         
             };
+
+
+ const handleEmailChange=(e)=>{
+     console.log(e)
+      const email=e.target.value;
+      setEmail(email)
+  }
+  
+ const handlePassReset=()=>{
+
+    
+      passwordReset(email)
+      .then(()=>{
+        alert('check your email')
+      })
+      .catch(error=>console.log(error))
+      
+
+ }           
+            
     return (
           <div>
             <div className="hero bg-base-200 min-h-screen">
@@ -48,10 +70,11 @@ const handleGoogleSignIn=()=>{
         <form onSubmit={handleForm} className="fieldset">
        
           <label className="label">Email</label>
-          <input type="email" className="input" placeholder="Email" name='email' required/>
+          <input type="email" onChange={handleEmailChange} className="input" placeholder="Email" name='email' required/>
           <label className="label">Password</label>
-          <input type="password" className="input" placeholder="Password" name='password' required/>
-          <div><a className="link link-hover">Forgot password?</a></div> 
+          <input type={showPass? "text":"password"} className="input" placeholder="Password" name='password' required/>
+                <div className='relative left-40 bottom-7' onClick={()=>setShowPass(!showPass)}>{showPass? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>}</div>
+          <div onClick={handlePassReset}><a className="link link-hover">Forgot password?</a></div> 
           <p className='text-red-500 text-center '>{errorMsg}</p>
           <button className="btn btn-success mt-4">Login</button>
           <button onClick={handleGoogleSignIn} className="btn bg-blue-100 mt-4">Login With Google  <FaGoogle /></button>

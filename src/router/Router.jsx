@@ -5,6 +5,7 @@ import PlantsDetails from "../pages/Plants/PlantsDetails";
 import SignUp from "../component/SignUp";
 import SignIn from "../component/SignIn";
 import PrivateRoute from "../component/PrivateRoute";
+import Profile from "../pages/profile/Profile";
 
 export const router =createBrowserRouter([
     {
@@ -34,6 +35,13 @@ export const router =createBrowserRouter([
                {
                 path: '/signIn',
                 Component: SignIn
+               }
+               ,
+               {
+                path:'/profile',
+                element:<PrivateRoute>
+                       <Profile></Profile>
+                </PrivateRoute>
                }
         ]
     }
