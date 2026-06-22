@@ -12,7 +12,7 @@ const PlantsDetails = () => {
          const name=e.target.name.value;
          const email=e.target.email.value;
          toast(name+' you brought a plant')
-         console.log(name,email)
+        //  console.log(name,email)
          e.target.reset()
         }
 

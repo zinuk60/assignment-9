@@ -8,7 +8,7 @@ import { FiMenu} from "react-icons/fi";
 const Navber = () => {
   const {user, SignOut, }=useContext(AuthContext);
 
-  console.log(user)
+  // console.log(user)
 
    const handleSignOut=()=>{
       SignOut()

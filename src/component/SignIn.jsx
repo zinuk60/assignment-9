@@ -27,8 +27,9 @@ const handleGoogleSignIn=()=>{
         const email = e.target.email.value;
         const pass = e.target.password.value;
         SignIn(email,pass)
-        .then(result=>{console.log(result.user)
-       Navigate(location.state || '/') 
+        .then(result=>{
+          
+         Navigate(location.state || '/') 
         })
         .catch((error)=>{
           setErrorMsg('Invalid email or password')
@@ -40,7 +41,7 @@ const handleGoogleSignIn=()=>{
 
 
  const handleEmailChange=(e)=>{
-     console.log(e)
+    //  console.log(e)
       const email=e.target.value;
       setEmail(email)
   }

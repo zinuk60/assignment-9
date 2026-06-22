@@ -26,7 +26,7 @@ const SignUp = () => {
 
   const onChangePassword=(e)=>{
     const pass = e.target.value;
-    console.log(pass);
+    // console.log(pass);
     
     if(pass.length<6){
       setErrorMsg('Password must be longer 6 characters')
@@ -41,7 +41,7 @@ const SignUp = () => {
     }
 
   }
-  console.log(errorMsg)
+  // console.log(errorMsg)
   const handleForm=(e)=>{
     e.preventDefault()
     // const name= e.target.name.value;

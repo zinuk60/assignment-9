@@ -10,7 +10,7 @@ const Profile = () => {
       updateUser({displayName:Name,photoURL:photoUrl})
 
       .then(()=>{
-        console.log('Updated successfully')
+        // console.log('Updated successfully')
         setUser({...user,displayName:Name,photoURL:photoUrl})
       }
     )
